@@ -1,0 +1,159 @@
+/*  
+Project Name: Drag & Drop Images
+Description: Here is a basic drag and drop example. Give me a thumbs-up, If you like it. Enjoy!
+Author: Abdul Samad
+Author URI: https://getabdulsamad.com/
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, rgb(179, 182, 183), rgb(208, 211, 212));
+  color: #2f2b36;
+  margin: 0;
+  height: 100vh;
+  letter-spacing: 0.3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  -webkit-display: flex;
+  -moz-display: flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  min-height: 100%;
+  width: 1280px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.project-title {
+  width: 100%;
+}
+
+.project-title h1 {
+  font-size: 34px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #fff;
+  -webkit-text-shadow: 0 1px 3px rgb(51, 51, 24), 0 1px 2px rgb(51, 51, 54);
+  -moz-text-shadow: 0 1px 3px rgb(51, 51, 24), 0 1px 2px rgb(51, 51, 54);
+  text-shadow: 0 1px 3px rgb(51, 51, 24), 0 1px 2px rgb(51, 51, 54);
+}
+
+.boxes-container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-gap: 10px;
+  -moz-gap: 10px;
+  gap: 10px;
+  width: 100%;
+}
+
+.box {
+  -webkit-display: flex;
+  -moz-display: flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  flex: 1;
+  min-height: 203px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  line-height: 0;
+  position: relative;
+  overflow: hidden;
+  cursor: -moz-move;
+  cursor: move;
+  border: 2px solid #2f2b36;
+  background-color: #2f2b36;
+}
+
+.box h3 {
+  color: #fff;
+  position: absolute;
+  z-index: 0;
+  opacity: 50%;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.box img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  min-height: 198px;
+}
+
+.hovered {
+  border: 2px dashed #2f2b36;
+  background-color: #b3b6b7;
+}
+
+.hold {
+  border: 2px solid #2f2b36;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 992px) {
+  .boxes-container {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+  }
+  .box {
+    width: 100%;
+  }
+  .box img {
+    min-height: 100%;
+  }
+}
